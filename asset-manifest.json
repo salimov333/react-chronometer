@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-chronometer/static/css/main.0feb6f76.css",
+    "main.js": "/react-chronometer/static/js/main.6325a4cf.js",
+    "index.html": "/react-chronometer/index.html",
+    "main.0feb6f76.css.map": "/react-chronometer/static/css/main.0feb6f76.css.map",
+    "main.6325a4cf.js.map": "/react-chronometer/static/js/main.6325a4cf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0feb6f76.css",
+    "static/js/main.6325a4cf.js"
+  ]
+}
