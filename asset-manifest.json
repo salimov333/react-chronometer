@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react-chronometer/static/css/main.0feb6f76.css",
-    "main.js": "/react-chronometer/static/js/main.6325a4cf.js",
+    "main.css": "/react-chronometer/static/css/main.ba19bb75.css",
+    "main.js": "/react-chronometer/static/js/main.d19cc41e.js",
     "index.html": "/react-chronometer/index.html",
-    "main.0feb6f76.css.map": "/react-chronometer/static/css/main.0feb6f76.css.map",
-    "main.6325a4cf.js.map": "/react-chronometer/static/js/main.6325a4cf.js.map"
+    "main.ba19bb75.css.map": "/react-chronometer/static/css/main.ba19bb75.css.map",
+    "main.d19cc41e.js.map": "/react-chronometer/static/js/main.d19cc41e.js.map"
   },
   "entrypoints": [
-    "static/css/main.0feb6f76.css",
-    "static/js/main.6325a4cf.js"
+    "static/css/main.ba19bb75.css",
+    "static/js/main.d19cc41e.js"
   ]
 }
