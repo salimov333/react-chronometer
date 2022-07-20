@@ -7,21 +7,33 @@ class Timer extends Component {
         this.state = {
             interval: null,
             start: null,
-            elapsedTime : 0
+            elapsedTime: 0
         }
     };
 
 
     start = () => {
-        this.stop();
-        this.setState({
-            interval: setInterval(this.tick, 1),
-            start: Date.now()
-        })
+        if (this.state.interval === null) {
+            this.setState({
+                interval: setInterval(this.tick, 1),
+                start: Date.now()
+            })
+        } else if (this.state.stopped) {
+            this.setState({
+                interval: setInterval(this.tick, 1),
+                start: Date.now() - this.state.elapsedTime,
+                stopped: false
+            })
+        } else {
+            return;
+        }
     };
 
     stop = () => {
         clearInterval(this.state.interval)
+        this.setState({
+            stopped: true
+        })
     };
 
     reset = () => {
@@ -29,13 +41,13 @@ class Timer extends Component {
         this.setState({
             interval: null,
             start: null,
-            elapsedTime : 0
+            elapsedTime: 0
         });
     };
 
     tick = () => {
         this.setState({
-            elapsedTime : Date.now() - this.state.start
+            elapsedTime: Date.now() - this.state.start
         })
     };
 
@@ -45,10 +57,10 @@ class Timer extends Component {
     }
 
     render() {
-        let elapsedTime  = this.state.elapsedTime ;
-        let hundredths = elapsedTime  ? Math.floor(this.state.elapsedTime  % 1000 / 10) : 0;
-        let seconds = elapsedTime  ? Math.floor(this.state.elapsedTime  % 60000 / 1000) : 0;
-        let minutes = elapsedTime  ? Math.floor(this.state.elapsedTime  / 60000) : 0;
+        let elapsedTime = this.state.elapsedTime;
+        let hundredths = elapsedTime ? Math.floor(this.state.elapsedTime % 1000 / 10) : 0;
+        let seconds = elapsedTime ? Math.floor(this.state.elapsedTime % 60000 / 1000) : 0;
+        let minutes = elapsedTime ? Math.floor(this.state.elapsedTime / 60000) : 0;
 
         //if (hundredths === 100) hundredths = 0;
 
